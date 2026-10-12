@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Movie Explorer 🎬
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive movie discovery application built with React, Material UI, React Router, Axios, and the TMDb API.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Trending movies and title search
+- Movie details, genres, cast, runtime, and trailers
+- Favorites saved in local storage
+- Demo login and logout UI
+- Light and dark themes with persistence
+- Genre, year, and rating filters
+- Load More pagination and optional infinite scrolling
+- Loading, empty, retry, and API error states
+- Responsive desktop and mobile layout
 
-### `npm start`
+## Getting started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```powershell
+npm install
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Create `.env` in the project root:
 
-### `npm test`
+```env
+REACT_APP_TMDB_API_KEY=YOUR_TMDB_V3_API_KEY
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Start the app with `npm start` and open `http://localhost:3000`.
 
-### `npm run build`
+## Scripts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```powershell
+npm start
+npm test
+npm run build
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## TMDb integration
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+TMDb requests are centralized in `src/services/tmdbApi.js` and use trending, search, discover, genre, and movie-detail endpoints. Movie data and imagery are provided by [The Movie Database (TMDb)](https://www.themoviedb.org/). This product is not endorsed or certified by TMDb.
 
-### `npm run eject`
+## Architecture
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `components/`: reusable UI components
+- `pages/`: Home, Movie Details, Favorites, and Login screens
+- `services/`: TMDb API requests
+- `context/`: favorites, theme, and demo user state
+- `theme/`: Material UI theme configuration
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The login is demonstration-only. Favorites, theme, and the last search are stored locally in the browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Security
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`.env` is excluded from Git, but `REACT_APP_*` values are embedded into a browser build and are visible to users. Use a backend or serverless proxy for credentials that must remain private. Never commit `.env` or confidential assessment materials.
 
-## Learn More
+## Testing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Automated tests cover app rendering, movie-card rendering/navigation, and demo login validation. Manual testing should also cover search, details, favorites, filters, pagination, infinite scrolling, direct routes, and mobile layouts.
