@@ -1,0 +1,10 @@
+import React from "react";
+import { render, screen, fireEvent } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
+import Login from "./Login";
+const mockLogin = jest.fn(); const mockNavigate = jest.fn();
+jest.mock("../context/AppContext", () => ({ useApp: () => ({ login: mockLogin }) }));
+jest.mock("react-router-dom", () => ({ ...jest.requireActual("react-router-dom"), useNavigate: () => mockNavigate }));
+beforeEach(() => jest.clearAllMocks());
+test("shows validation error for empty fields", () => { render(<MemoryRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}><Login/></MemoryRouter>); fireEvent.click(screen.getByRole("button", { name: /login/i })); expect(screen.getByText("Please enter a username and password.")).toBeInTheDocument(); });
+test("logs in and navigates home", () => { render(<MemoryRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}><Login/></MemoryRouter>); fireEvent.change(screen.getByLabelText("Username"), { target: { value: "Developer" } }); fireEvent.change(screen.getByLabelText("Password"), { target: { value: "demo" } }); fireEvent.click(screen.getByRole("button", { name: /login/i })); expect(mockLogin).toHaveBeenCalledWith("Developer"); expect(mockNavigate).toHaveBeenCalledWith("/"); });
