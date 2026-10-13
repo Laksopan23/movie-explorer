@@ -16,7 +16,7 @@ A responsive movie discovery application built with React, Material UI, React Ro
 
 ## Live links
 
-- Live demo: **Deploy to Vercel or Netlify and add the URL here**
+- Live demo: https://movie-explorer-livid-seven.vercel.app
 - GitLab: `https://gitlab.com/Laksopan23/movie-explorer`
 
 ## Setup
