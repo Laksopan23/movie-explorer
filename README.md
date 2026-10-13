@@ -96,15 +96,15 @@ Add the generated deployment URL to the Live links section above after deploymen
 
 ### Movie details and favorites
 
-![Movie details](screenshots/05-movie-details-dark-full.png)
-![Favorites with items](screenshots/13-favorites-with-items.png)
-![Logout confirmation](screenshots/17-logout-dialog.png)
+| Movie details | Favorites with items | Logout confirmation |
+|---|---|---|
+| ![Movie details](screenshots/05-movie-details-dark-full.png) | ![Favorites with items](screenshots/13-favorites-with-items.png) | ![Logout confirmation](screenshots/17-logout-dialog.png) |
 
 ### Authentication and responsive layouts
 
-![Login page](screenshots/08-login-page.png)
-![Mobile home](screenshots/22-home-mobile.png)
-![Mobile movie details](screenshots/23-movie-details-mobile.png)
+| Login page | Mobile home | Mobile movie details |
+|---|---|---|
+| ![Login page](screenshots/08-login-page.png) | ![Mobile home](screenshots/22-home-mobile.png) | ![Mobile movie details](screenshots/23-movie-details-mobile.png) |
 
 ## Testing checklist
 
