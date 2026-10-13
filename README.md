@@ -18,6 +18,7 @@ A responsive movie discovery application built with React, Material UI, React Ro
 
 - Live demo: https://movie-explorer-beta-beige.vercel.app
 - GitLab: [Movie Explorer on GitLab](https://gitlab.com/Laksopan23/movie-explorer)
+- GitHub: [Movie Explorer on GitHub](https://github.com/Laksopan23/movie-explorer)
 
 ## Setup
 
@@ -113,5 +114,6 @@ This product uses the TMDb API but is not endorsed or certified by TMDb. Movie d
 ## Assessment note
 
 This project was created for a developer selection assessment. The confidential assessment document and local credentials must not be committed.
+
 
 
