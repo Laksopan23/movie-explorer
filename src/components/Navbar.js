@@ -1,3 +1,4 @@
+// Global navigation, theme control, favorite access, and confirmed logout live here.
 import React, { useState } from "react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { AppBar, Toolbar, Typography, Button, Box, IconButton, Container, Badge, Tooltip, Dialog, DialogTitle, DialogContent, DialogActions } from "@mui/material";
@@ -27,4 +28,6 @@ export default function Navbar() {
     </Dialog>
   </>;
 }
+
+
 

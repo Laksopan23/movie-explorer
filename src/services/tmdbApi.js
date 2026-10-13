@@ -1,3 +1,4 @@
+// Centralized TMDb client. All endpoints and credential handling live here for consistency.
 import axios from "axios";
 
 const tmdbApi = axios.create({ baseURL: "https://api.themoviedb.org/3", timeout: 10000 });
@@ -19,3 +20,5 @@ export const discoverMovies = (filters = {}, page = 1, signal) => { const params
 export const getMovieGenres = (signal) => tmdbApi.get("/genre/movie/list", { signal }).then((r) => r.data.genres);
 export const getMovieDetails = (id) => tmdbApi.get(`/movie/${id}`, { params: { append_to_response: "credits,videos" } }).then((r) => r.data);
 export const getPosterUrl = (path) => path ? `https://image.tmdb.org/t/p/w500${path}` : null;
+
+
