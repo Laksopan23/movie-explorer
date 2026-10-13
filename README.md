@@ -86,10 +86,13 @@ Add the generated deployment URL to the Live links section above after deploymen
 
 ### Home and discovery
 
-![Home trending view](screenshots/01-home-trending-dark.png)
-![Batman search results](screenshots/02-home-search-batman.png)
-![Genre filtering](screenshots/03-home-filter-genre-action.png)
-![Pagination](screenshots/04-home-scrolled-loadmore.png)
+| Trending movies | Batman search |
+|---|---|
+| ![Home trending view](screenshots/01-home-trending-dark.png) | ![Batman search results](screenshots/02-home-search-batman.png) |
+
+| Genre filtering | Pagination |
+|---|---|
+| ![Genre filtering](screenshots/03-home-filter-genre-action.png) | ![Pagination](screenshots/04-home-scrolled-loadmore.png) |
 
 ### Movie details and favorites
 
