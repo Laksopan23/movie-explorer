@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Movie Explorer logo</title>
+  <rect width="64" height="64" rx="14" fill="#fb7185"/>
+  <path d="M15 22h34v25H15z" fill="#0b101b" opacity=".94"/>
+  <path d="m15 22 7 8 7-8 7 8 7-8 6 8v-8H15z" fill="#fb7185"/>
+  <path d="M22 37h20M22 42h13" stroke="#fb7185" stroke-width="3" stroke-linecap="round"/>
+</svg>
